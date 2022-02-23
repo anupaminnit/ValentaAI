@@ -1,28 +1,20 @@
-var slidePosition = 1;
-SlideShow(slidePosition);
+// var slideIndex = [1, 1];
+// /* Class the members of each slideshow group with different CSS classes */
+// var slideId = ["mySlides1", "mySlides2", "mySlides3"]
+// showSlides(1, 0);
+// showSlides(1, 1);
 
-// forward/Back controls
-function plusSlides(n) {
-  SlideShow(slidePosition += n);
-}
+// function plusSlides(n, no) {
+//   showSlides(slideIndex[no] += n, no);
+// }
 
-//  images controls
-function currentSlide(n) {
-  SlideShow(slidePosition = n);
-}
-
-function SlideShow(n) {
-  var i;
-  var slides = document.getElementsByClassName("Containers");
-  var circles = document.getElementsByClassName("dots");
-  if (n > slides.length) {slidePosition = 1}
-  if (n < 1) {slidePosition = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < circles.length; i++) {
-      circles[i].className = circles[i].className.replace(" enable", "");
-  }
-  slides[slidePosition-1].style.display = "block";
-  circles[slidePosition-1].className += " enable";
-} 
+// function showSlides(n, no) {
+//   var i;
+//   var x = document.getElementsByClassName(slideId[no]);
+//   if (n > x.length) { slideIndex[no] = 1 }
+//   if (n < 1) { slideIndex[no] = x.length }
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//   }
+//   x[slideIndex[no] - 1].style.display = "block";
+// }
