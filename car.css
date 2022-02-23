@@ -2,9 +2,9 @@
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 2000px;
   position: relative;
-  margin: auto;
+  margin-left: 600px;
 }
 
 /* Make the images invisible by default */
@@ -16,10 +16,10 @@
 /* forward & Back buttons */
 .Back {
   cursor: pointer;
-  position: absolute;
+  position:absolute;
   top: 250px;
-  left: 8px;
-  color: grey;
+  left: 5px;
+  color: black;
   font-weight: bold;
   font-size: 19px;
   transition: 0.4s ease;
@@ -33,10 +33,10 @@
 /* Place the "forward button" to the right */
 .forward {
   cursor: pointer;
-  position: absolute;
+  position:absolute;
   top: 250px; 
-  left: 250px;
-  color: grey;
+  left: 175px;
+  color:black;
   font-weight: bold;
   font-size: 19px;
   transition: 0.4s ease;
