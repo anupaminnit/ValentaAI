@@ -37,11 +37,11 @@
   height: 40px;
 }
 
-.carousel .carousel_actions button#carousel-button--prev {
+.carousel .carousel_actions .carousel-button--prev {
   margin-left: 20px;
 }
 
-.carousel .carousel_actions button#carousel-button--next {
+.carousel .carousel_actions .carousel-button--next {
   margin-right: 20px;
 }
 
@@ -55,12 +55,6 @@
 }
 
 /* CSSSSSS */
-
-.block-large-1-2v2 > .column {
-  -webkit-flex: 0 0 50%;
-  -ms-flex: 0 0 50%;
-  /* flex: 0 0 50%; */
-}
 
 .services-list .item-servicev2 {
   margin-bottom: 2.4rem;
