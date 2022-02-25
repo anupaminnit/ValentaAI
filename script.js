@@ -1,32 +1,9 @@
 let slidePosition = [0, 0, 0, 0, 0, 0];
 
-// const slides1 = document.getElementsByClassName("carousel_item");
-// const slides2 = document.getElementsByClassName("carousel_item2");
-// const totalSlides1 = slides1.length;
-// const totalSlides2 = slides1.length;]
-
-window.addEventListener("click", function (event) {
-  moveToNextSlide(event.target.id);
-});
-
-// document.getElementsByClassName('button').onclick = function() {
-//    for (var i = 0, n = divstopop.length; i < n; ++i) {
-//     // get id property from element and set as innerHTML
-//     divstopop[i].innerHTML = divstopop[i].id;
-// }
-// }
-
-// document
-//   .getElementById("carousel_button--next")
-//   .addEventListener("click", function () {
-//     moveToNextSlide();
-//   });
-
-// document
-//   .getElementById("carousel_button--prev")
-//   .addEventListener("click", function () {
-//     moveToPrevSlide();
-//   });
+function fun(e) {
+  let id = e.getAttribute("id");
+  moveToNextSlide(id);
+}
 
 function updateSlidePosition(slides, id) {
   for (let slide of slides) {
@@ -61,3 +38,20 @@ function moveToNextSlide(id) {
   updateSlidePosition(slides, id);
   console.log("Hello next this is postion ", slidePosition);
 }
+
+// For Refernece
+
+// window.addEventListener("click", function (event) {
+//   moveToNextSlide(event.target.id);
+// });
+
+// var elements = document.getElementsByClassName("button");
+
+// var myFunction = function () {
+//   var attribute = this.getAttribute("id");
+//   console.log(attribute);
+// };
+
+// for (var i = 0; i < elements.length; i++) {
+//   elements[i].addEventListener("click", myFunction(this), false);
+// }

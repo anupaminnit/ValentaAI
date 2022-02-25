@@ -1,5 +1,5 @@
 .carousel {
-  overflow: hidden;
+  overflow: visible;
   max-width: 336px;
   position: relative;
 }
@@ -12,7 +12,10 @@
 .carousel .carousel_item img {
   width: 100%;
   max-width: 336px;
-  height: auto;
+  height: 579px;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  border-radius: 10px;
 }
 
 .carousel .carousel_item--visible {
@@ -28,13 +31,23 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.carousel .carousel_actions button {
-  border: 0;
-  border-radius: 10px;
-  font-weight: bold;
+.carousel .carousel_actions a {
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: auto;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.carousel .carousel_actions a:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.5;
+  border-radius: 5px;
+  color: whitesmoke;
 }
 
 .carousel .carousel_actions .carousel-button--prev {
@@ -45,21 +58,20 @@
   margin-right: 20px;
 }
 
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 /* CSSSSSS */
 
 .services-list .item-servicev2 {
   margin-bottom: 2.4rem;
   /* padding: 0 30px; */
   min-height: 44.8rem;
+  filter: drop-shadow(25px 25px 10px rgb(71, 70, 70));
+  transition: 0.2s;
+  opacity: 0.75;
+}
+
+.services-list .item-servicev2:hover {
+  filter: drop-shadow(0px 35px 10px rgb(71, 70, 70));
+  opacity: 1;
 }
 
 .columnv2 {
@@ -67,4 +79,13 @@
   -ms-flex: 1 1 0%;
   flex: 1 1 0%;
   /* padding: 0 20px; */
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
